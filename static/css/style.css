@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box h1 {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+#weather-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #00b4d8;
+}
+
+button {
+    background: #00b4d8;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0077b6;
+}
+
+button svg {
+    color: white;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.location {
+    margin-bottom: 1.5rem;
+}
+
+.location h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+
+.location p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.main-temp {
+    margin-bottom: 2rem;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #666;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.detail-item span:not(.label) {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
